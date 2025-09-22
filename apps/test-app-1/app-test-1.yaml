@@ -10,13 +10,13 @@ metadata:
   name: test-app-1-deploy
   namespace: test-app-1
 spec:
-  replicas: 1
+  replicas: 2
   selector: 
     matchLabels:
       app: test-app-1
   template:
     metadata:
-      labels: 
+      labels:
         app: test-app-1
     spec:
       containers:
