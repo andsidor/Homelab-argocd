@@ -10,8 +10,8 @@ metadata:
   name: test-app-1-deploy
   namespace: test-app-1
 spec:
-  replicas: 2
-  selector: 
+  replicas: 3
+  selector:
     matchLabels:
       app: test-app-1
   template:
@@ -20,11 +20,18 @@ spec:
         app: test-app-1
     spec:
       containers:
-        - name: test-app-1
-          image:nginx #nginx:latest #nginx:1.25.2
-          ports:
-          - name: web
-            containerPort: 80
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
 ---
 apiVersion: v1
 kind: Service  
