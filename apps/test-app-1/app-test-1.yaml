@@ -16,7 +16,7 @@ spec:
       app: test-app-1
   template:
     metadata:
-      labels:
+      labels: 
         app: test-app-1
     spec:
       containers:
