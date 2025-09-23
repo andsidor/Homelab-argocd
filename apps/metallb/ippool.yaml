@@ -1,0 +1,19 @@
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: pool
+  namespace: metallb
+spec:
+  addresses:
+  - 192.168.0.200-192.168.0.250  # Dostosuj ten zakres IP do swojej sieci
+
+# apiVersion: metallb.io/v1beta1
+# kind: IPAddressPool
+# metadata:
+#   name: pool
+#   namespace: metallb-system
+# spec:
+#   addresses:
+#     - 192.168.0.192/26
+#   autoAssign: false
