@@ -38,5 +38,10 @@
 # temp/
 # tmp/
 /apps/cloudflare-tunnel-sealedsecrets/*.yaml
+/apps/cloudflare-tunnel-sealedsecrets/*.yaml
+/apps/cloudflare-tunnel-sealedsecrets/*.yaml
+/apps/cloudflare-tunnel-sealedsecrets/*
+
+
 
 # *.bak
