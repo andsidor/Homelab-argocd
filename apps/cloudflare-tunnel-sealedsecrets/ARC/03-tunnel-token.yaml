@@ -1,8 +1,0 @@
-apiVersion: v1
-data:
-    token: "ZXlKaElqb2lORE5qTURRek1XSmxOR0ZrT1Roa016WmtaR0ppTW1FeE1ETTFORFZtTmpFaUxDSjBJam9pTXpSbU5Ua3lZVGN0TmpNek15MDBOVEJpTFRoaE1UVXRaV1EwTlRJd09EY3lNVFk1SWl3aWN5STZJbGt5VFRGTk1rWnNUakpOZEU1cVFURk5hVEF3VGtSa2JVeFViR3hOVkdOMFdWUk5lVmt5U1RCT1ZFRjRXVEpOTlNKOQo="
-kind: Secret
-metadata:
-    name: tunnel-token
-    namespace: cloudflare
-type: Opaque

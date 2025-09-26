@@ -39,8 +39,9 @@
 # tmp/
 /apps/cloudflare-tunnel-sealedsecrets/*.yaml
 /apps/cloudflare-tunnel-sealedsecrets/*.pem
-/apps/cloudflare-tunnel-sealedsecrets/ARC/*.yaml
+/apps/cloudflare-tunnel-sealedsecrets/ARCH/*.yaml
 /apps/cloudflare-tunnel-sealedsecrets/*
+/*.pem
 
 
 
