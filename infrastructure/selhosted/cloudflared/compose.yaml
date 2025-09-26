@@ -1,0 +1,18 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared
+    container_name: cloudflared
+    environment:
+      - TZ=Europe/Amsterdam # Change this to your timezone
+      - TUNNEL_TOKEN=${TOKEN}
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    networks:
+      - cloudflared
+    volumes:
+      - ./config:/etc/cloudflared
+    restart: unless-stopped
+
+networks:
+  cloudflared:
+    name: cloudflared

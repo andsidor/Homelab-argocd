@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate 
+metadata:
+  name: self-signed-cert
+  namespace: cert-manager
+spec:
+  secretName: self-signed--cert-tls
+  dnsNames:
+    - andrzejsidor.online
+  # Issuer references are always required.
+  issuerRef:
+    name: self-sign-issuer
+    kind: ClusterIssuer

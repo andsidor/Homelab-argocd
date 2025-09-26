@@ -19,11 +19,11 @@ helm template ingress-nginx  ingress-nginx \
 
 https://metallb.github.io/metallb
 
-helm template metallb  metallb \
---repo https://metallb.github.io/metallb \
---version 0.15.2 \
---namespace metallb \
-> ./apps/metallb/metallb-v015.2.yaml
+helm template community-charts community-charts \
+--repo https://community-charts.github.io/helm-charts\
+--version 1.15.9 \
+--namespace n8n \
+> ./apps/n8n/base/n8n-1.112.4.yaml
 
 
 
@@ -39,6 +39,16 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 https://metallb.io/
 
 
+
+self signed cert
+https://github.com/antonputra/tutorials/blob/main/lessons/083/example-1/1-ca-certificate.yaml
+
+
+KA-F:
+0-
+1-(trzeba zefiniować ten sam namespace co issuer.  Certificatewazne dodać typ pod nazwą issuera do kórego sie odwojemy)
+
+kubectl describe certificate self-signed-cert -n cert-manager
 
 
 

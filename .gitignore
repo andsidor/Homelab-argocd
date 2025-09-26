@@ -1,0 +1,42 @@
+# # Docker files
+# .docker/
+# docker-compose.override.yml
+# docker-compose.*.yml
+# !docker-compose.yml
+
+# # Build artifacts
+# dist/
+# build/
+# *.tar
+# *.gz
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# # Logs
+# logs/
+# *.log
+
+# # System files
+# .DS_Store
+# Thumbs.db
+
+# # IDE specific files
+# .idea/
+# .vscode/
+# *.swp
+# *.swo
+
+# # Dependencies
+# node_modules/
+# vendor/
+
+# # Temporary files
+# *.tmp
+# temp/
+# tmp/
+/apps/cloudflare-tunnel-sealedsecrets/*.yaml
+
+# *.bak

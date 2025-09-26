@@ -1,0 +1,19 @@
+
+services:
+  portainer:
+    image: portainer/portainer-ce:2.34.0-alpine
+    container_name: portainer-ce
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Amsterdam
+      PUID: 1000
+      PGID: 1000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer2:/data
+    ports:
+    - 8001:8001
+    - 9444:9444
+volumes:
+  portainer:
+    name: portainer2

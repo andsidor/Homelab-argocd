@@ -10,9 +10,11 @@ letsencrypt-issuer
 
 
 
+sudo vim /etc/systemd/system/k3s.service
+sudo systemctl restard k3s.service
 
 
+curl -k http://IPadress:port<XXXXX> 
 
-
-
+-
 
