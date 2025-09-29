@@ -10,10 +10,10 @@ services:
       PGID: 1000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - portainer2:/data
+      - portainer:/data2
     ports:
     - 8001:8001
     - 9444:9444
 volumes:
   portainer:
-    name: portainer2
+    name: portainer3

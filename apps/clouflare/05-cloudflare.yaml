@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudflared-tunnel
+spec:
+  selector:
+    matchLabels:
+      app: cloudflared-tunnel
+  template:
+    metadata:
+      labels:
+        app: cloudflared-tunnel
+    spec:
+      volumes:
+      - name: cloudflared-auth-volume
+        secret:
+          secretName: cloudflared-auth
+      - name: cloudflared-config
+        configMap:
+          name: cloudflared-config
+          items:
+            - key: config.yml
+              path: config.yml
+      containers:
+      - name: cloudflared-tunnel
+        image: ghcr.io/nimamahmoudi/cloudflared:sha-58c4400
+        volumeMounts:
+          - name: cloudflared-auth-volume
+            mountPath: /home/sidor/.cloudflared/7b67c126-e5a9-4082-aec7-2cebf184d331.json
+            subPath: 7b67c126-e5a9-4082-aec7-2cebf184d331.jso
+            readOnly: true
+          - name: cloudflared-auth-volume
+            mountPath: /home/sidor/.cloudflared/cert.pem
+            subPath: cert.pem
+            readOnly: true
+          - name: cloudflared-config
+            mountPath: /home/sidor/.cloudflared/config.yml
+            subPath: config.yml
+            readOnly: true
+        env:
+          - name: TUNNEL_NAME
+            value: 7b67c126-e5a9-4082-aec7-2cebf184d331 # fo

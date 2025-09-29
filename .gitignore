@@ -42,7 +42,7 @@
 /apps/cloudflare-tunnel-sealedsecrets/ARCH/*.yaml
 /apps/cloudflare-tunnel-sealedsecrets/*
 /*.pem
-
-
+infrastructure/selhosted/ngnix-proxy-manager/letsencrypt*
+/infrastructure/selfhosted/traefik/*.json
 
 # *.bak
