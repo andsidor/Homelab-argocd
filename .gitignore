@@ -43,6 +43,6 @@
 /apps/cloudflare-tunnel-sealedsecrets/*
 /*.pem
 infrastructure/selhosted/ngnix-proxy-manager/letsencrypt*
-/infrastructure/selfhosted/traefik/*.json
-
+/infrastructure/selhosted/traefik/*.json
+# /infrastructure/selhosted/traefik/
 # *.bak
