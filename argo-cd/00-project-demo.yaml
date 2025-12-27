@@ -1,0 +1,22 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-demo
+  namespace: argocd
+spec:
+  project: apps
+  source:
+    repoURL: https://github.com/andsidor/Homelab-argocd.git
+    targetRevision: master
+    path: apps/nginx-demo/overlays
+    kustomize:
+      namePrefix: "demo-"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
