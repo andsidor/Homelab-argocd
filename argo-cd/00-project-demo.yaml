@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/andsidor/Homelab-argocd
     targetRevision: master
-    path: apps/nginx-demo/overlays
+    path: apps/app1/overlays
     kustomize:
       namePrefix: "demo-"
   destination:
