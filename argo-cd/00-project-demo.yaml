@@ -5,9 +5,9 @@ metadata:
   name: nginx-demo
   namespace: argocd
 spec:
-  project: apps
+  project: default
   source:
-    repoURL: https://github.com/andsidor/Homelab-argocd.git
+    repoURL: https://github.com/andsidor/Homelab-argocd
     targetRevision: master
     path: apps/nginx-demo/overlays
     kustomize:
